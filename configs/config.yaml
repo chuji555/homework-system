@@ -1,0 +1,14 @@
+mysql:
+  # 替换为你的MySQL账号密码（格式：用户名:密码@tcp(IP:端口)/数据库名?参数）
+  dsn: "root:2586321121a@tcp(127.0.0.1:3306)/homework_system?charset=utf8mb4&parseTime=True&loc=Local"
+  max_open_conns: 100
+  max_idle_conns: 20
+jwt:
+  # 自定义密钥（随便写一串字符，越长越安全）
+  secret: "redrock-homework-system-2024"
+  # AccessToken有效期（2小时）
+  access_expire: 7200
+  # RefreshToken有效期（7天）
+  refresh_expire: 604800
+server:
+  port: 8080
