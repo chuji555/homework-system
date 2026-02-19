@@ -21,6 +21,9 @@
 ## 三、项目结构说明
 ```
 homework-system/
+├── api/                    
+│   ├── docs/            # 接口文档目录
+│   │   └── 
 ├── configs/                # 配置文件目录
 │   └── config.yaml         # 核心配置（数据库、JWT、端口等）
 ├── dao/                    # 数据访问层（数据库操作）
@@ -32,9 +35,8 @@ homework-system/
 │   ├── submission.go       # 提交模块接口
 │   └── user.go             # 用户模块接口
 ├── middleware/             # 中间件层（认证/权限/日志等）
-│   ├── admin.go            # 管理员权限中间件
 │   ├── auth.go             # JWT 认证中间件
-│   └── student.go          # 学生权限中间件
+│   └── student.go          # 权限控制中间件
 ├── models/                 # 数据模型层（数据库表映射）
 │   ├── homework.go         # 作业模型
 │   ├── submission.go       # 提交模型
@@ -42,7 +44,6 @@ homework-system/
 ├── pkg/                    # 公共工具包
 │   ├── errcode/            # 自定义错误码
 │   │   └── errcode.go
-│   └── utils/              # 通用工具函数（可选）
 ├── router/                 # 路由层（接口注册/分组）
 │   └── router.go           # 路由初始化
 ├── service/                # 业务逻辑层（核心逻辑封装）
@@ -197,3 +198,4 @@ curl -H "Authorization: Bearer 你的AccessToken" http://localhost:8080/user/pro
 | 20001  | 数据库错误         | 数据库连接失败、操作失败     |
 | 20002  | 截止时间错误       | 作业截止时间早于当前时间     |
 ```
+
